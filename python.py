@@ -9,5 +9,10 @@ def decimal_to_binary(decimal_num) {
 }
 
 def binary_to_decimal(binary_num):
-    decimal_num = int(binary_num, 2)
-    return decimal
+    decimal_num = 0
+    power = len(binary_num) - 1
+    for digit in binary_num:
+        decimal_num += int(digit) * (2** power)
+        power -= 1
+    return decimal_num
+
