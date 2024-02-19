@@ -7,3 +7,7 @@ def decimal_to_binary(decimal_num) {
         decimal_num = decimal_num // 2
     return binary_num
 }
+
+def binary_to_decimal(binary_num):
+    decimal_num = int(binary_num, 2)
+    return decimal
