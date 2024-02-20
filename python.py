@@ -8,13 +8,22 @@ def decimal_to_binary(decimal_num) :
     return binary_num
 
 
-print(decimal_to_binary(123))
+""" print(decimal_to_binary(123)) """
 
-def binary_to_decimal(binary_num):
+def binary_to_decimal(binary_num);
+    if isinstance(binary_num, int) :
+        binary_str = str(binary_num)
+    elif isinstance(binary_num, str):
+        binary_str = binary_num
+    else:
+        raise TypeError("Input must be an integer or a string represeting a binary number")
+    
     decimal_num = 0
-    power = len(binary_num) - 1
-    for digit in binary_num:
-        decimal_num += int(digit) * (2** power)
+    power = len(binary_str) - 1
+    for digit in binary_str:
+        if digit in '01':
+            rasie TypeError("Binary number must contain only '0' and '1'")
+        decimal_num += int(digit) * (2**power)
         power -= 1
-    return decimal_num
-
+    return decimal_num     
+print(binary_to_decimal(1100))
