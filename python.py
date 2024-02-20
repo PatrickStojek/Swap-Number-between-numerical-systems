@@ -1,4 +1,4 @@
-def decimal_to_binary(decimal_num) {
+def decimal_to_binary(decimal_num) :
     if decimal_num == 0:
         return '0'
     binary_num = ''
@@ -6,7 +6,9 @@ def decimal_to_binary(decimal_num) {
         binary_num = str(decimal_num % 2) + binary_num
         decimal_num = decimal_num // 2
     return binary_num
-}
+
+
+print(decimal_to_binary(123))
 
 def binary_to_decimal(binary_num):
     decimal_num = 0
