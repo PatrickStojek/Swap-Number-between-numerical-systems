@@ -29,27 +29,3 @@ def binary_to_decimal(binary_num);
 print(binary_to_decimal(1100))
 
 
-def decimal_to_other_base(decimal_num, base):
-    if not isinstance(decimal_num, int) or not isinstance(base, int):
-        return "Both inputs must be integers"
-    if base < 2:
-        return "Base must be greater than or equal to 2"
-    
-    result = ""
-    while decimal_num > 0:
-        remainder = decimal_num % base
-        result = str(remainder) + result
-        decimal_num //= base
-    
-    return result if result else "0"
-
-# Example usage:
-decimal_num = 42
-base = 2
-print(f"Decimal {decimal_num} in base {base}: {decimal_to_other_base(decimal_num, base)}")
-
-base = 8
-print(f"Decimal {decimal_num} in base {base}: {decimal_to_other_base(decimal_num, base)}")
-
-base = 16
-print(f"Decimal {decimal_num} in base {base}: {decimal_to_other_base(decimal_num, base)}")
