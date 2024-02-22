@@ -29,3 +29,17 @@ def binary_to_decimal(binary_num);
 print(binary_to_decimal(1100))
 
 
+def decimal_to_any_base(decimal_num, base) :
+    if base < 2 or base > 33:
+        raise ValueError("Base must be between 2 and 33")
+    if(decimal_num) == 0:
+        return '0'
+    any_base_num = ''
+    while decimal_num > 0:
+        remainder = decimal_num % base
+    if remainder < 10:
+        any_base_num = str(remainder) + any_base_num
+    else:
+        any_base_num = chr(remainder + 55) + any_base_num
+    decima_num = decimal_num // base
+    return any_base_num
