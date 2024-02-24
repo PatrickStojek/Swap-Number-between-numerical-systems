@@ -43,3 +43,15 @@ def decimal_to_any_base(decimal_num, base) :
         any_base_num = chr(remainder + 55) + any_base_num
     decima_num = decimal_num // base
     return any_base_num
+
+
+def any_base_to_decimal(any_base_number, base) :
+        decimal_num = 0
+        power = len(num) - 1
+            for digit in any_base_number :
+                if '0' <= digit <= '9':
+                    decimal_num += int(digit) * (base ** power)
+                else:
+                    decimal_num += (ord(digit) - 55) * (base ** power)
+                power -= 1
+            return decimal_num
