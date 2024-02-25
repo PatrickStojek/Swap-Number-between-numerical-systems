@@ -35,6 +35,26 @@ function decimal_to_binary(decimal_num) {
         return decimal_num;
     }
 
+    function decimal_to_any_base(decimal_num, base) {
+        if (base < 2 || base > 33) {
+            throw new ValueError("Base must be between 2 and 33");
+        }
+        if (decimal_num === 0) {
+            return '0';
+        }
+        let any_base_num = '';
+        while (decimal_num > 0) {
+            let remainder = decimal_num % base;
+            if (remainder < 10) {
+                any_base_num = String(remainder) + any_base_num;
+            } else {
+                any_base_num = String.fromCharCode(remainder + 55) + any_base_num;
+            }
+            decimal_num = Math.floor(decimal_num / base);
+        }
+        return any_base_num;
+    }
+
     console.log(binary_to_decimal(101)); // Output: 5
 
 console.log(decimal_to_binary(12))
