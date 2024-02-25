@@ -35,4 +35,6 @@ function decimal_to_binary(decimal_num) {
         return decimal_num;
     }
 
+    console.log(binary_to_decimal(101)); // Output: 5
+
 console.log(decimal_to_binary(12))
