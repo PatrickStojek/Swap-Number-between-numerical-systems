@@ -78,3 +78,5 @@ function any_base_to_any_base(number1, base1, base2) {
     decimal_number = any_base_to_decimal(number1, base1)
     return decimal_to_any_base(decimal_number, base2)
 }
+
+any_base_to_any_base('F', 16, 10) ///expected output 15
