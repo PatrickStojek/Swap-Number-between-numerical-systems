@@ -58,3 +58,20 @@ function decimal_to_binary(decimal_num) {
     console.log(binary_to_decimal(101)); // Output: 5
 
 console.log(decimal_to_binary(12))
+
+function any_base_to_decimal(any_base_number, base) {
+    let decimal_num = 0;
+    let power = any_base_number.length - 1;
+    for (let i = 0; i < any_base_number.length; i++) {
+        let digit = any_base_number[i];
+        if('0' <= digit && digit <= '9') {
+            decimal_num += parseInt(digit) * Math.pow(base, power)
+        } else {
+            decimal_num += (digit.charCodeAt(0) - 55) * Math.pow(base, power);
+        }
+        power--;
+    }
+    return decimal_num;
+}
+
+
