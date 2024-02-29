@@ -79,4 +79,9 @@ function any_base_to_any_base(number1, base1, base2) {
     return decimal_to_any_base(decimal_number, base2)
 }
 
-any_base_to_any_base('F', 16, 10) ///expected output 15
+const convertedNumber = document.querySelector('.converted-number')
+
+const submitButton = document.querySelector(".test-Btn")
+const input = document.querySelector(".NumberInput")
+const options = document.querySelector('.option')
+
