@@ -71,7 +71,7 @@ function any_base_to_decimal(any_base_number, base) {
     return decimal_num;
 }
 
-const convertedNumber  = document.querySelector(".convertedNumber")
+const convertedNumber  = document.querySelector(".converted-number")
 
 function any_base_to_any_base(number1, base1, base2) {
     decimal_number = any_base_to_decimal(number1, base1)
