@@ -85,3 +85,15 @@ const submitButton = document.querySelector(".test-Btn")
 const input = document.querySelector(".NumberInput")
 const options = document.querySelector('.option')
 
+submitButton.addEventListener('click', () => {
+    let val1 = document.getElementsByTagName('select')[0].value;
+    let val2 = document.querySelector('select')[1].value;
+
+    if(input.value == '' || isNaN(input.value)) {
+        throw new ValueError("Please enter a valid number")
+    } else {
+        const desiredNumber = any_base_to_any_base(input.value, val1, val2)
+        console.log(desiredNumber)
+        convertedNumber.innerHTML = desiredNumber
+    }
+})
