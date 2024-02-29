@@ -5,7 +5,7 @@ function decimal_to_binary(decimal_num) {
     let binary_num = ''
     while (decimal_num > 0)  {
         binary_num = String(decimal_num % 2) + binary_num
-        decimal_num = Math.floor(decimal_num / 2)
+         decimal_num = Math.floor(decimal_num / 2)
     }
     return binary_num
 }
@@ -55,9 +55,6 @@ function decimal_to_binary(decimal_num) {
         return any_base_num;
     }
 
-    console.log(binary_to_decimal(101)); // Output: 5
-
-console.log(decimal_to_binary(12))
 
 function any_base_to_decimal(any_base_number, base) {
     let decimal_num = 0;
@@ -74,23 +71,26 @@ function any_base_to_decimal(any_base_number, base) {
     return decimal_num;
 }
 
+const convertedNumber  = document.querySelector(".convertedNumber")
+
 function any_base_to_any_base(number1, base1, base2) {
     decimal_number = any_base_to_decimal(number1, base1)
     return decimal_to_any_base(decimal_number, base2)
 }
 
-const convertedNumber = document.querySelector('.converted-number')
+    // get selected value and store it in val 
+ 
 
-const submitButton = document.querySelector(".test-Btn")
+const SubmitButton = document.querySelector(".test-Btn")
 const input = document.querySelector(".NumberInput")
-const options = document.querySelector('.option')
+const options = document.querySelector("option")
 
-submitButton.addEventListener('click', () => {
-    let val1 = document.getElementsByTagName('select')[0].value;
-    let val2 = document.querySelector('select')[1].value;
+SubmitButton.addEventListener('click', () => {
+    let val1 = document.getElementsByTagName('select')[0].value; 
+    let val2 = document.getElementsByTagName('select')[1].value;
 
     if(input.value == '' || isNaN(input.value)) {
-        throw new ValueError("Please enter a valid number")
+        throw new ValueError('Please enter a valid number')
     } else {
         const desiredNumber = any_base_to_any_base(input.value, val1, val2)
         console.log(desiredNumber)
