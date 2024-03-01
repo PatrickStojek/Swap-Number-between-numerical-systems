@@ -89,6 +89,10 @@ SubmitButton.addEventListener('click', () => {
     let val1 = document.getElementsByTagName('select')[0].value; 
     let val2 = document.getElementsByTagName('select')[1].value;
 
+    if(convertedNumber.textContent != '') {
+        convertedNumber.textContent == '';
+    }
+
     if(input.value == '' || isNaN(input.value)) {
         throw new ValueError('Please enter a valid number')
     } else {
