@@ -8,8 +8,6 @@ def decimal_to_binary(decimal_num) :
     return binary_num
 
 
-""" print(decimal_to_binary(123)) """
-
 def binary_to_decimal(binary_num):
     if isinstance(binary_num, int) :
         binary_str = str(binary_num)
@@ -29,7 +27,7 @@ def binary_to_decimal(binary_num):
 print(binary_to_decimal(1100))
 
 
-def daecimal_to_any_bse(decimal_num, base) :
+def decimal_to_any_base(decimal_num, base) :
     if base < 2 or base > 33:
         raise ValueError("Base must be between 2 and 33")
     if(decimal_num) == 0:
@@ -41,7 +39,7 @@ def daecimal_to_any_bse(decimal_num, base) :
             any_base_num = str(remainder) + any_base_num
         else:
             any_base_num = chr(remainder + 55) + any_base_num
-        decima_num = decimal_num // base
+        decimal_num = decimal_num // base
     return any_base_num
 
 
@@ -61,4 +59,4 @@ def any_base_to_any_base(number1, base1, base2) :
     return decimal_to_any_base(decimal_number, base2)
 
 
-any_base_to_any_base('123',10,16)
+print(any_base_to_any_base('123',10,2))
