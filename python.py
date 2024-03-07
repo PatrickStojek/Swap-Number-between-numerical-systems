@@ -24,8 +24,6 @@ def binary_to_decimal(binary_num):
         decimal_num += int(digit) * (2**power)
         power -= 1
     return decimal_num     
-print(binary_to_decimal(1100))
-
 
 def decimal_to_any_base(decimal_num, base) :
     if base < 2 or base > 33:
@@ -54,9 +52,14 @@ def any_base_to_decimal(any_base_number, base) :
             power -= 1
         return decimal_num
 
-def any_base_to_any_base(number1, base1, base2) :
-    decimal_number = any_base_to_decimal(number1, base1)
-    return decimal_to_any_base(decimal_number, base2)
+def any_base_to_any_base() :
+    Number_Initiall = input("Enter the first number for converting:")
+    baseStart = int(input("Enter the base of the first entered number:"))
+    BaseDesired = int(input("Enter you desired base of your number:"))
+    decimal_number = any_base_to_decimal(Number_Initiall, baseStart)
+    return decimal_to_any_base(decimal_number, BaseDesired)
+
+print(any_base_to_any_base())
 
 
-print(any_base_to_any_base('123',10,2))
+
