@@ -5,3 +5,21 @@
     font-size: 3rem;
     font-weight: bold;
 }
+
+.container {
+    display: none;
+    flex-direction: row;
+}
+
+.big {
+    font-size: 40px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.NumberInput2 {
+    width: 200px;
+}
