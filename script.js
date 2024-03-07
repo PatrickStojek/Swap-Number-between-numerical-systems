@@ -1,3 +1,12 @@
+const container =  document.querySelector(".container")
+function showContainer() {
+    document.addEventListener('click', (event) => {
+        if(event.target.classList.contains('test-Btn')) {
+            container.style.display = 'flex'
+        }
+    })
+}
+
 function decimal_to_binary(decimal_num) {
     if(decimal_num == 0) {
         return '0'
@@ -99,5 +108,16 @@ SubmitButton.addEventListener('click', () => {
         const desiredNumber = any_base_to_any_base(input.value, val1, val2)
         console.log(desiredNumber)
         convertedNumber.innerHTML = desiredNumber
+        showContainer()
     }
+})
+
+
+/* Here we will be wrting the code for calculation operations */
+
+const secondNumber = document.querySelector(".NumberInput2")
+const CalcBtn = document.querySelector('.calc-Btn')
+
+CalcBtn.addEventListener('click', () => {
+    
 })
