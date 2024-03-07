@@ -93,7 +93,7 @@ SubmitButton.addEventListener('click', () => {
         convertedNumber.textContent == '';
     }
 
-    if(input.value == '' || isNaN(input.value)) {
+    if(input.value == '') {
         throw new ValueError('Please enter a valid number')
     } else {
         const desiredNumber = any_base_to_any_base(input.value, val1, val2)
