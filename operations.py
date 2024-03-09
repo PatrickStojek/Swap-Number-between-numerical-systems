@@ -14,6 +14,8 @@ def add_in_base(number1, number2, base):
     result = ''
     carry = 0
 
+    number1 = str(number1)
+    number2 = str(number2)
     # Wyrównaj długości obu liczb
     number1 = number1.rjust(max(len(number1), len(number2)), '0')
     number2 = number2.rjust(max(len(number1), len(number2)), '0')
@@ -30,4 +32,7 @@ def add_in_base(number1, number2, base):
 
 
 print(add_in_base(11,12,10))
+
+
+
 
