@@ -26,4 +26,8 @@ def add_in_base(number1, number2, base):
 
     if carry > 0:
         result = value_to_digit(carry) + result
-    return result
+    return result   
+
+
+print(add_in_base(11,12,10))
+
