@@ -22,3 +22,74 @@ map <char, int> map_CI =
     {'O', 24}, {'P', 25}, {'Q', 26}, {'R', 27}, {'S', 28}, {'T', 29},
     {'U', 30}, {'V', 31}, {'W', 32}, {'X', 33}, {'Y', 34}, {'Z', 35}
 };
+
+vector <int> tab_residual(int p, int n)
+{
+   vector <int> tab_resid;
+   int r;
+   while (n>0)
+   {
+      r=n%p;
+      tab_resid.push_back(r);
+      n=n/p;
+   }
+   return tab_resid;    
+}
+
+void print_conv(vector <int> tab_resid)
+{
+   int s;
+   s = tab_resid.size();
+   cout << "Liczba po konwersji = ";
+   for (int i = s - 1; i>=0; i--)
+   {
+       cout << tab_resid[i];
+   }
+   cout << "\n";
+   return;
+}
+
+string number_conv(int p, vector <int> tab_resid)
+{
+   string numb_conv = "";
+   int s;
+   s = tab_resid.size();
+   for(int i = s - 1; i>= 0; i--)
+   {
+      numb_conv = numb_conv + mapa_IC[tab_resid[i]]
+   }
+   
+   
+   return numb_conv;
+}
+
+
+int main()
+{
+    int p,n;
+    vector <int> tab_resid;
+    cout << "Podaj podstawe systemu od 2 do 36 = ";
+    cin >> p;
+    if (p>=2 && p<=36 && p!=10)
+    {
+       cout << "Podaj liczbe całkowitą > 0 = ";
+       cin >> n;
+       if (n>0)
+       {
+          tab_resid = tab_residual(p, n);
+          print_conv(tab_resid);
+         
+         
+         
+       }
+       else
+       {
+           cout << "Niepoprawna liczba";
+       }
+    }
+    else
+    {
+       cout << "Niepoprawna podstawa systemu";    
+    }
+   return 0;  
+}
