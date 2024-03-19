@@ -56,7 +56,7 @@ string number_conv(int p, vector <int> tab_resid)
    s = tab_resid.size();
    for(int i = s - 1; i>= 0; i--)
    {
-      numb_conv = numb_conv + mapa_IC[tab_resid[i]]
+      numb_conv = numb_conv + mapa_IC[tab_resid[i]];
    }
    
    
