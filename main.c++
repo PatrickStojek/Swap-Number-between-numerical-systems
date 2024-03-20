@@ -89,7 +89,9 @@ int main()
        {
           tab_resid = tab_residual(p, n);
           print_conv(tab_resid);
-         
+          numb_conv = number_conv(tab_resid);
+          print_conv(tab_resid, numb_conv);
+          check_number_conv(p, numb_conv);
          
          
        }
