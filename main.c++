@@ -36,6 +36,18 @@ vector <int> tab_residual(int p, int n)
    return tab_resid;    
 }
 
+string number_conv(vector <int> tab_resid)
+{
+   string numb_conv = "";
+   int s;
+   s = tab_resid.size();
+   for(int i = s - 1; i>= 0; i--)
+   {
+      numb_conv = numb_conv + mapa_IC[tab_resid[i]];
+   }
+   return numb_conv;
+}
+
 void print_conv(vector <int> tab_resid)
 {
    int s;
@@ -48,21 +60,6 @@ void print_conv(vector <int> tab_resid)
    cout << "\n";
    return;
 }
-
-string number_conv(int p, vector <int> tab_resid)
-{
-   string numb_conv = "";
-   int s;
-   s = tab_resid.size();
-   for(int i = s - 1; i>= 0; i--)
-   {
-      numb_conv = numb_conv + mapa_IC[tab_resid[i]];
-   }
-   
-   
-   return numb_conv;
-}
-
 
 int main()
 {
