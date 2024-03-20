@@ -63,6 +63,17 @@ void print_conv(vector <int> tab_resid, string number_conv)
    return;
 }
 
+int check_number_conv(int p, string numb_conv)
+ {
+    int s;
+    int check_numb_conv =0;
+    s = numb_conv.size();
+    for( int i = s - 1; i>= 0; i--) {
+        check_numb_conv = check_numb_conv + map_CI[numb_conv[i]] * pow(p, s - 1 - i);
+    }
+    cout << check_numb_conv;
+    return check_numb_conv;
+ }
 
 int main()
 {
