@@ -48,7 +48,7 @@ string number_conv(vector <int> tab_resid)
    return numb_conv;
 }
 
-void print_conv(vector <int> tab_resid)
+void print_conv(vector <int> tab_resid, string number_conv)
 {
    int s;
    s = tab_resid.size();
@@ -57,9 +57,12 @@ void print_conv(vector <int> tab_resid)
    {
        cout << tab_resid[i];
    }
+   
+   cout << " ---> " << number_conv;
    cout << "\n";
    return;
 }
+
 
 int main()
 {
