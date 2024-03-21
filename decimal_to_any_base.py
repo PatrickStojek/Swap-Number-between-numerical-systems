@@ -10,3 +10,11 @@ map_CI = {
     '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
     **{chr(65 + i): i + 10 for i in range(26)}  # Maps 'A' to 10, 'B' to 11, ..., 'Z' to 35
 }
+
+def any_base_to_decimal(any_base_number, base):
+    decimal_num = 0
+    power = len(any_base_number) - 1
+    for digit in any_base_number:
+        decimal_num = map_CI[[digit] * (base ** power)]
+        power -= 1
+    return decimal_num
