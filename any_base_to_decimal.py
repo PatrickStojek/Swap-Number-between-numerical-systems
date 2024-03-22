@@ -31,3 +31,9 @@ def tab_residual(base, integer_number):
         integer_number = integer_number // base
     return tab_resid
 
+def number_conv(tab_resid):
+    numb_conv = ''
+    s = len(tab_resid)
+    for i in range(s -1, -1, -1):
+        numb_conv += mapa_IC[tav_resid[i]]
+    return numb_conv
