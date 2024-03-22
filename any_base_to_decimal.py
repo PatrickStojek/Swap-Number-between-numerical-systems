@@ -23,3 +23,11 @@ any_base_number = input("input number in choosen numerical system: ")
 desired_base = input("input your desired base")
 print(any_base_to_decimal(any_base_number, desired_base))
 
+def tab_residual(base, integer_number):
+    tab_resid = []
+    while integer_number > 0:
+        r = integer_number % base
+        tab_resid.append(r)
+        integer_number = integer_number // base
+    return tab_resid
+
