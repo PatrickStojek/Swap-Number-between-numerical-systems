@@ -18,3 +18,8 @@ def any_base_to_decimal(any_base_number, base):
         decimal_num = map_CI[[digit] * (base ** power)]
         power -= 1
     return decimal_num
+
+any_base_number = input("input number in choosen numerical system: ")
+desired_base = input("input your desired base")
+print(any_base_to_decimal(any_base_number, desired_base))
+
