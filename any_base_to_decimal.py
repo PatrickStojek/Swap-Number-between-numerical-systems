@@ -19,8 +19,8 @@ def any_base_to_decimal(any_base_number, base):
         power -= 1
     return decimal_num
 
-any_base_number = input("input number in choosen numerical system: ")
-desired_base = input("input your desired base")
+any_base_number = input("input your number in any numerical system: ")
+desired_base = int(input("input the numerical base of inputed number: "))
 print(any_base_to_decimal(any_base_number, desired_base))
 
 def tab_residual(base, integer_number):
