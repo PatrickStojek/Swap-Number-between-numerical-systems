@@ -20,7 +20,7 @@ def any_base_to_decimal(any_base_number, base):
     return decimal_num
 
 any_base_number = input("input your number in any numerical system: ")
-desired_base = int(input("input the numerical base of inputed number: "))
+input_base_number = int(input("input the numerical base of inputed number: "))
 print(any_base_to_decimal(any_base_number, desired_base))
 
 def tab_residual(base, integer_number):
