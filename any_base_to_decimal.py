@@ -20,7 +20,7 @@ def any_base_to_decimal(any_base_number, base):
     return decimal_num
 
 any_base_number = input("input your number in any numerical system: ")
-input_base_number = int(input("input the numerical base of inputed number: "))
+inputed_base_number = int(input("input the numerical base of inputed number: "))
 print(any_base_to_decimal(any_base_number, desired_base))
 
 def tab_residual(base, integer_number):
@@ -37,3 +37,5 @@ def number_conv(tab_resid):
     for i in range(s -1, -1, -1):
         numb_conv += mapa_IC[tav_resid[i]]
     return numb_conv
+
+print(number_conv(tab_residual(16, 2806))) # output: AF6
